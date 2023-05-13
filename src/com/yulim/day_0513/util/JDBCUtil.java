@@ -1,4 +1,4 @@
-package com.yulim.day_0513;
+package com.yulim.day_0513.util;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

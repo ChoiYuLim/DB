@@ -1,4 +1,4 @@
-package com.yulim.day_0513;
+package com.yulim.day_0513.service;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -8,6 +8,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import com.yulim.day_0513.entity.Customer;
+import com.yulim.day_0513.entity.Emp;
+import com.yulim.day_0513.util.JDBCUtil;
 
 public class calculateBonus {
     public static void main(String[] args) throws SQLException {
@@ -29,12 +32,10 @@ public class calculateBonus {
                     rs.getString("JOB"), rs.getString("SAL"), rs.getString("COMM")));
         }
 
-        // 3. SQL 쿼리를 실행합니다.
         Statement stmt2 = conn.createStatement();
         ResultSet rs2 = stmt2.executeQuery("SELECT ACCOUNT_MGR FROM CUSTOMER");
         long startTime = System.currentTimeMillis(); // 코드 실행 전 시간 측정
 
-        // 4. 쿼리 결과를 처리합니다.
         while (rs2.next()) {
             customerInfo.add(new Customer(rs2.getString("ACCOUNT_MGR")));
         }

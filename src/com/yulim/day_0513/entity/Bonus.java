@@ -1,4 +1,4 @@
-package com.yulim.day_0513;
+package com.yulim.day_0513.entity;
 
 public class Bonus {
     private String ename;
