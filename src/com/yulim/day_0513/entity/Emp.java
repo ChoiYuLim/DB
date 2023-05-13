@@ -25,6 +25,8 @@ public class Emp {
     }
 
     public String getSal() {
+        if (sal == null)
+            return "0";
         return sal;
     }
 
@@ -33,7 +35,8 @@ public class Emp {
     }
 
     public String getComm() {
-        if(comm==null) return "0";
+        if (comm == null)
+            return "0";
         return comm;
     }
 
