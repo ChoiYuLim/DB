@@ -69,13 +69,13 @@ public class calculateBonus {
             // 기본 보너스 0
             int bonus = 0;
             // 100000보다 크면서, Job이 두개가 아닌 경우 보너스 2000
-            if (higerKey.contains(e.getEmpno() + "") && e.getJob() != "Analyist"
-                    && e.getJob() != "President") {
+            if (higerKey.contains(e.getEmpno() + "") && !e.getJob().equals("ANALYST")
+                    && !e.getJob().equals("PRESIDENT")) {
                 bonus = 2000;
             }
             // 100000보다 작으면서, Job이 두개가 아닌 경우 보너스 1000
-            else if (lowerKey.contains(e.getEmpno() + "") && e.getJob() != "Analyist"
-                    && e.getJob() != "President") {
+            else if (lowerKey.contains(e.getEmpno() + "") && !e.getJob().equals("ANALYST")
+                    && !e.getJob().equals("PRESIDENT")) {
                 bonus = 1000;
             }
             // Bonus 테이블에 삽입
