@@ -15,12 +15,10 @@ public class JDBCUtil {
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver"); // 로딩하는 코드. 오라클의 JDBC 드라이버 이름 (JDBC
                                                               // 드라이버는 ojdbc11.jar)
-            String url = "jdbc:oracle:thin:@192.168.119.119:1521/dink21.dbsvr"; // DBMS 연결을 위한 식별 값,
-            // jdbc:oracle:thin:@HOST:PORT:SID
+            String url = "jdbc:oracle:thin:@192.168.119.119:1521/dink21.dbsvr"; // DBMS 연결을 위한 식별 값,jdbc:oracle:thin:@HOST:PORT:NAME
             String user = "scott";
             String passwd = "tiger";
-            conn = DriverManager.getConnection(url, user, passwd); // DriverManager를 이용해서 Connection
-                                                                   // 생성
+            conn = DriverManager.getConnection(url, user, passwd); // DriverManager를 이용해서 Connection 생성
             return conn;
 
         } catch (ClassNotFoundException e) {

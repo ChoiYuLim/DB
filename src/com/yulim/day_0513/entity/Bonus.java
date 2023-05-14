@@ -1,11 +1,13 @@
 package com.yulim.day_0513.entity;
 
+// Boonus 테이블 클래스
 public class Bonus {
     private String ename;
     private String job;
     private String sal;
     private String comm;
 
+    // 생성자
     public Bonus(String ename, String job, String sal, String comm) {
         super();
         this.ename = ename;

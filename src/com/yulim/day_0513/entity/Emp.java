@@ -1,5 +1,6 @@
 package com.yulim.day_0513.entity;
 
+// Emp 테이블 클래스
 public class Emp {
     private String ename;
     private int empno;
@@ -7,6 +8,7 @@ public class Emp {
     private String sal;
     private String comm;
 
+    // 생성자
     public Emp(String ename, int empno, String job, String sal, String comm) {
         super();
         this.ename = ename;
@@ -24,20 +26,18 @@ public class Emp {
         this.ename = ename;
     }
 
+    // null값을 0으로 처리함
     public String getSal() {
-        if (sal == null)
-            return "0";
-        return sal;
+        return sal == null ? "0" : sal;
     }
 
     public void setSal(String sal) {
         this.sal = sal;
     }
 
+    // null값을 0으로 처리함
     public String getComm() {
-        if (comm == null)
-            return "0";
-        return comm;
+        return comm == null ? "0" : comm;
     }
 
     public void setComm(String comm) {
